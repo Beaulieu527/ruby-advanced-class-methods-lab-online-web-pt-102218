@@ -49,13 +49,13 @@ class Song
   def self.new_by_name(filename)
     song = self.new
     song.filename = filename
-    return song
+    
   end
 
   def self.create_from_filename
   end
 
-  def self.destroy_all
+  def self.destroy_all 
     @@all.clear
   end
 
