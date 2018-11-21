@@ -32,7 +32,7 @@ class Song
   def self.find_by_name(song)
     @@all.each do |song|
       if (song.name == name)
-        return song.name
+        return song
       end
     end
     return nil
@@ -43,7 +43,7 @@ class Song
   end
 
   def self.alphabetical
-      @@all.sort_by{song[:song.name]}
+      @@all.sort_by{song[song.name]}
   end
   def self.destroy_all
     @@all.clear
