@@ -29,6 +29,19 @@ class Song
     return song
   end
 
+  def self.find_by_name(song)
+    @@all each do |song|
+      if (song.name == name) 
+        return song
+      end 
+      return nil
+    end 
+  end
+
+  def self.find_or_create_by_name
+  end
+
+  def 
   def self.destroy_all
     @@all.clear
   end
