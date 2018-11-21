@@ -55,7 +55,7 @@ class Song
   end
 
   def self.create_from_filename(filename)
-    song = self.new_by
+    song = self.new
     @@all << song
     return song
   end
