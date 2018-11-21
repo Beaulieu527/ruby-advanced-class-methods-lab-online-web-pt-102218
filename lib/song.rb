@@ -34,15 +34,17 @@ class Song
       if (song.name == name)
         return song
       end
-    end 
+    end
     return nil
   end
 
-  def self.find_or_create_by_name
-    return song.find_by_name || song.create_by_name
+  def self.find_or_create_by_name(name)
+    return song.find_by_name(name) || song.create_by_name(name)
   end
 
-  def 
+  def self.alphabetical
+      @@all.sort_by{song[song.name]}
+  end
   def self.destroy_all
     @@all.clear
   end
